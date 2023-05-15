@@ -8,15 +8,18 @@ namespace FiguresSquare
 {
     public class Quadrant : AbstractFigure
     {
-        public Quadrant(double radius, double a, double b) : base(radius, a, b)
+        private readonly double _a;
+        private readonly double _b;
+
+        public Quadrant(double a, double b)
         {
-            radius = 0;
-            a = 2;
-            b = 2;
+            _a = a;
+            _b = b;
         }
-        public override double CalculateSquare(double radius, double a, double b)
+        
+        public override double CalculateSquare()
         {
-            return a * b;
+            return _a * _b;
         }
     }
 }

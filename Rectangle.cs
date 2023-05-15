@@ -8,16 +8,17 @@ namespace FiguresSquare
 {
     public class Rectangle : AbstractFigure
     {
-        public Rectangle(double radius, double a, double b) : base(radius, a, b)
-        {
-            radius = 0;
-            a = 1;
-            b = 2;
-        }
-        public override double CalculateSquare(double radius, double a, double b)
-        {
-            return a * b;
-        }
+        private readonly double _a;
+        private readonly double _b;
 
+        public Rectangle(double a, double b)
+        {
+            _a = a;
+            _b = b;
+        }
+        public override double CalculateSquare()
+        {
+            return _a * _b;
+        }
     }
 }

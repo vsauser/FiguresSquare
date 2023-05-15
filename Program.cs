@@ -9,7 +9,12 @@ namespace FiguresSquare
         {
             double result;
 
-            List<AbstractFigure> figure = new List<AbstractFigure>() { new Circle(2, 0, 0), new Quadrant(0, 2, 2), new Rectangle(0, 1, 2) };
+            List<AbstractFigure> figure = new List<AbstractFigure>()
+            {
+                new Circle(2),
+                new Quadrant(2, 2),
+                new Rectangle(1, 2)
+            };
 
             Console.WriteLine("Hello World!");
 
@@ -28,7 +33,7 @@ namespace FiguresSquare
 
             foreach (AbstractFigure element in figure)
             {
-                Console.WriteLine(element);
+                Console.WriteLine($"Square of {nameof(element)}: {element.CalculateSquare()}");
             }
 /*
             for (int i = 0; i < figure.Count; i++)

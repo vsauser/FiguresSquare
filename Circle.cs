@@ -8,15 +8,16 @@ namespace FiguresSquare
 {
     public class Circle : AbstractFigure
     {
-        public Circle(double radius, double a, double b) : base(radius, a, b)
+        private readonly double _radius;
+
+        public Circle(double radius)
         {
-            radius = 2;
-            a = 0;
-            b = 0;
+            _radius = radius;
         }
-        public override double CalculateSquare(double radius, double a, double b)
+        
+        public override double CalculateSquare()
         {
-            return Math.PI * radius * radius;
+            return Math.PI * Math.Pow(_radius, 2);
         }
     }
 }
